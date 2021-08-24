@@ -21,13 +21,14 @@ echo "LoadTheme $SCRIPTPATH/theme.toml" > "$XDG_RUNTIME_DIR"/leftwm/commands.pip
 
 # Set background
 if [ -x "$(command -v feh)" ]; then
-  feh --no-fehbg --bg-fill "$SCRIPTPATH"/background.jpg
+  feh --bg-fill "$SCRIPTPATH"/background.jpg
 fi
 
-#Applications to 2run at startup
+#Applications to run at startup
 dunst -conf "$SCRIPTPATH"/dunst/dunstrc &
 blueman-applet &
 nm-applet &
+xss-lock slock &
 lxqt-policykit-agent &
 xfce4-power-manager &
 
@@ -39,5 +40,5 @@ do
   barname="mainbar$index"
   monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybar.config $barname &> /dev/null &
   let index=index+1
-  bash /home/sircanister/.config/leftwm/themes/Garden/polybar/launch.sh
 done
+bash /home/sircanister/.config/leftwm/themes/Flower/polybar/launch.sh
