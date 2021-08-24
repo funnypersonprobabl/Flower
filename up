@@ -40,5 +40,5 @@ do
   barname="mainbar$index"
   monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybar.config $barname &> /dev/null &
   let index=index+1
+  bash /home/sircanister/.config/leftwm/themes/Flower/polybar/launch.sh
 done
-bash /home/sircanister/.config/leftwm/themes/Flower/polybar/launch.sh
