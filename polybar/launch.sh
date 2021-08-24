@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="/home/sircanister/.config/leftwm/themes/Flower/polybar"
+DIR="~/.config/leftwm/themes/Flower/polybar"
 
 killall -q polybar
 
